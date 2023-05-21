@@ -4,6 +4,10 @@ install.packages("ggplot2")
 
 library(ggplot2)
 
+ggplot(data, aes(x=Beat)) + geom_freqpoly()
+
+ggplot(data, aes(x = factor(Beat), y = ID)) +geom_boxplot()+stat_summary(fun = "mean", geom = "point", shape = 23, size = 3, fill = "orange")
+
 ggplot(data,aes(x=Beat))+geom_histogram()
 
 ggplot(data,aes(x=Beat))+geom_histogram(fill="white",color="black")
